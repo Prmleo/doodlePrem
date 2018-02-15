@@ -1,0 +1,32 @@
+
+<div id="usrdata">
+  Email:<input class="form-control" [(ngModel)]="userMail" placeholder="premleojesus@gmail.com" type="email"/>
+  <br>
+  Address:<input  class="form-control" [(ngModel)]="userAddr"type="text"/>
+  <br>
+  FirstName:<input class="form-control" [(ngModel)]="frstName" type="text"/>
+  <br>
+  LastName:<input class="form-control"[(ngModel)]="lstName" type="text"/>
+  <br>
+  Hobbies:<input class="form-control"[(ngModel)]="Hbby" type="text"/>
+  <br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <button class="btn btn-info">Register</button>
+</div>
+<br><br>
+<br>
+<font color="blue" size="5">This data from database(csv file)</font>
+<div *ngIf="userMail=='premleojesus@gmail.com'&&userMail!=''">
+<p *ngFor="let usr of users">{{usr.User_Data}}</p>
+</div>
+<br>
+<div *ngIf="userMail!='premleojesus@gmail.com'">
+  <p><font color="red">please use this mail id:premleojesus@gmail.com. And fill all the details</font></p>
+  </div>
+  <br>
+  
+
+
+
